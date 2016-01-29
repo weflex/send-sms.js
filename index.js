@@ -1,10 +1,6 @@
 "use strict";
 
 const Adapter = require('./adapters/base');
-const request = require('superagent-promise')(
-  require('superagent'), 
-  Promise
-);
 
 class SMS {
   constructor(name, adapter) {
