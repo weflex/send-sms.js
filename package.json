@@ -4,7 +4,7 @@
   "description": "The library to send simple message which is compatible with multi-services, only supports 短信宝",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/weflex/send-sms.js/issues"
   },
-  "homepage": "https://github.com/weflex/send-sms.js#readme"
+  "homepage": "https://github.com/weflex/send-sms.js#readme",
+  "dependencies": {
+    "superagent": "^1.7.2",
+    "superagent-promise": "^1.1.0"
+  },
+  "devDependencies": {
+    "tape": "^4.4.0"
+  }
 }
