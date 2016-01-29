@@ -65,7 +65,7 @@ class YourServiceAdapter extends Adapter {
 }
 ```
 
-To see an example, see [短信宝](index.js)
+To see an example, see [短信宝](adapters/smsbao.js)
 
 ## License
 
