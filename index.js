@@ -1,5 +1,6 @@
 "use strict";
 
+const Adapter = require('./adapters/base');
 const request = require('superagent-promise')(
   require('superagent'), 
   Promise
@@ -21,16 +22,6 @@ class SMS {
       phoneNum,
       `【${this.name}】${text}`
     );
-  }
-}
-
-class Adapter {
-  constructor(name, options) {
-    this.name = name;
-    this.options = options;
-  }
-  request() {
-    throw new Error('not implemented');
   }
 }
 

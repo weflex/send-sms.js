@@ -1,6 +1,8 @@
 "use strict";
 
-class SMSBao extends Adapter {
+const BaseAdapter = require('./base');
+
+class SMSBao extends BaseAdapter {
   constructor(credentials) {
     if (!credentials.user) {
       throw new TypeError('credentials.user is required');
