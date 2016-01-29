@@ -15,6 +15,8 @@ The library to send simple message which is compatible with multi-services, curr
 $ npm install send-sms --save
 ```
 
+This library also is able to run at browser-side or any JavaScript environment.
+
 ## Usage
 
 ```js
