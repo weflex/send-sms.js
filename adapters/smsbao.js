@@ -20,7 +20,7 @@ class SMSBao extends BaseAdapter {
     });
   }
   request(phoneNum, content) {
-    return request.get(url)
+    return request.get(this.options.endpoint)
     .query({
       u: this.options.credentials.user,
       p: this.options.credentials.pass,
