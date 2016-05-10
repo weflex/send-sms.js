@@ -1,6 +1,6 @@
 {
   "name": "send-sms",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "The library to send simple message which is compatible with multi-services, only supports 短信宝",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/weflex/send-sms.js#readme",
   "dependencies": {
+    "moment": "^2.13.0",
     "superagent": "^1.7.2",
     "superagent-promise": "^1.1.0"
   },
