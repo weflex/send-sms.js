@@ -24,5 +24,6 @@ class SMS {
 exports.SMS = SMS;
 exports.Adapter = Adapter;
 exports.adapters = {
-  SMSBao: require('./adapters/smsbao.js')
+  SMSBao: require('./adapters/smsbao.js'),
+  RonglianYun: require('./adapters/ronglian-yun.js')
 };

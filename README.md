@@ -8,6 +8,7 @@
 The library to send simple message which is compatible with multi-services, currently it supports the following services:
 
 - 短信宝(smsbao.com)
+- 容联云(www.yuntongxun.com)
 
 ## Installation
 
