@@ -13,11 +13,11 @@ class SMS {
     this.name = name;
     this.adapter = adapter;
   }
-  send(phoneNum, text) {
-    return this.adapter.request(
-      phoneNum,
-      `【${this.name}】${text}`
-    );
+  send(phoneNum, content) {
+    if (typeof content === 'string') {
+      content = `【${this.name}】${content}`;
+    }
+    return this.adapter.request(phoneNum, content);
   }
 }
 

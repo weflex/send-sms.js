@@ -30,11 +30,12 @@ class SMSBao extends BaseAdapter {
     });
   }
   request(phoneNum, content) {
-    const timestamp = moment().format('yyyyMMddHHmmss');
+    const credentials = this.options.credentials;
+    const timestamp = moment().format('YYYYMMDDhhmmss');
     const signature = crypto.createHash('md5').update(
-      this.options.sid + this.options.token + timestamp).toUpperCase();
-    const authorization = new Buffer(this.options.sid + ':' + timestamp);
-    const pathname = '/2013-12-26/Accounts/' + this.options.sid 
+      credentials.sid + credentials.token + timestamp).digest('hex').toUpperCase();
+    const authorization = new Buffer(credentials.sid + ':' + timestamp).toString('base64');
+    const pathname = '/2013-12-26/Accounts/' + credentials.sid 
       + '/SMS/TemplateSMS?sig=' + signature;
 
     return request.post(this.options.endpoint + pathname)
@@ -43,7 +44,7 @@ class SMSBao extends BaseAdapter {
     .set('Authorization', authorization)
     .send({
       to: phoneNum,
-      appId: this.options.appId,
+      appId: credentials.appId,
       templateId: content.templateId,
       datas: content.datas,
       data: content.data
